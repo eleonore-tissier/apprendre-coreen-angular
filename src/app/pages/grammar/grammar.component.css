@@ -1,0 +1,13 @@
+
+main {
+  margin: 8rem 2rem 2rem 6rem;
+}
+
+div.home-link {
+  margin-bottom: 2rem;
+}
+
+div.home-link a {
+  font-size: 1.5rem;
+  margin-bottom: 5rem;
+}

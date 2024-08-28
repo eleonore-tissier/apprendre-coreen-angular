@@ -1,0 +1,8 @@
+span.letter {
+  text-align: center;
+}
+
+span.letter p:nth-child(1){
+  font-weight: 700;
+  font-size: 2rem;
+}

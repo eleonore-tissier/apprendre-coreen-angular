@@ -1,0 +1,35 @@
+.title {
+  display: flex;
+  flex-direction: row;
+  gap: 6rem;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Roboto Serif';
+  font-size: 2rem;
+}
+
+.french {
+  font-weight: 300;
+}
+
+.korean {
+  font-weight: 400;
+}
+
+.line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+}
+
+.line :nth-child(1) {
+  width: 8rem;
+}
+
+.line :nth-child(2) {
+  width: 100%;
+  margin-right: 6rem;
+}

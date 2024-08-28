@@ -1,0 +1,549 @@
+<main>
+  <div class="home-link">
+    <a routerLink="/home" routerLinkActive="active">< Retour</a>
+  </div>
+  <app-title></app-title>
+  <div class="menu">
+    <app-letter-block
+      [title]="'Consonnes'"
+      [korean_title]="'자음'"
+      [content]="[consonants]"
+      [itemsPerPage]="5"
+    ></app-letter-block>
+    <app-letter-block
+      class="double"
+      [title]="'Consonnes doubles'"
+      [korean_title]="'쌍자음'"
+      [content]="[double_consonants]"
+      [itemsPerPage]="3"
+    ></app-letter-block>
+    <app-letter-block
+      [title]="'Consonnes finale composées'"
+      [korean_title]="'겹받침'"
+      [content]="[final_consonants]"
+      [itemsPerPage]="8"
+    ></app-letter-block>
+    <app-letter-block
+      [title]="'Voyelles'"
+      [korean_title]="'모음'"
+      [content]="[basic_vowels, other_vowels]"
+      [itemsPerPage]="4"
+    ></app-letter-block>
+<!--    <div class="letter-block">-->
+<!--      <h2>Consonnes finale composées</h2>-->
+<!--      <hr class="long">-->
+<!--      <p>겹받침</p>-->
+<!--      <table>-->
+<!--        <tr>-->
+<!--          <td>-->
+<!--            <p>ㄳ</p>-->
+<!--            <p>ㄱ</p>-->
+<!--            <p>g/k</p>-->
+<!--          </td>-->
+<!--          <td>-->
+<!--            <p>ㄵ</p>-->
+<!--            <p>ㄴ</p>-->
+<!--            <p>n</p>-->
+<!--          </td>-->
+<!--          <td>-->
+<!--            <p>ㄶ</p>-->
+<!--            <p>ㄴ</p>-->
+<!--            <p>n</p>-->
+<!--          </td>-->
+
+<!--          <td>-->
+<!--            <p>ㄼ</p>-->
+<!--            <p>ㄹ</p>-->
+<!--            <p>r/l</p>-->
+<!--          </td>-->
+<!--          <td>-->
+<!--            <p>ㄽ</p>-->
+<!--            <p>ㄹ</p>-->
+<!--            <p>r/l</p>-->
+<!--          </td>-->
+<!--          <td>-->
+<!--            <p>ㄾ</p>-->
+<!--            <p>ㄹ</p>-->
+<!--            <p>r/l</p>-->
+<!--          </td>-->
+
+<!--          <td>-->
+<!--            <p>ㅀ</p>-->
+<!--            <p>ㄹ</p>-->
+<!--            <p>r/l</p>-->
+<!--          </td>-->
+<!--          <td>-->
+<!--            <p>ㅄ</p>-->
+<!--            <p>ㅂ</p>-->
+<!--            <p>b/p</p>-->
+<!--          </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <td>-->
+<!--            <p>ㄺ</p>-->
+<!--            <p>ㄱ</p>-->
+<!--            <p>g/k</p>-->
+<!--          </td>-->
+<!--          <td>-->
+<!--            <p>ㄻ</p>-->
+<!--            <p>ㅁ</p>-->
+<!--            <p>m</p>-->
+<!--          </td>-->
+<!--          <td>-->
+<!--            <p>ㄿ</p>-->
+<!--            <p>ㅍ</p>-->
+<!--            <p>p'</p>-->
+<!--          </td>-->
+<!--        </tr>-->
+<!--      </table>-->
+<!--    </div>-->
+<!--    <div class="letter-block">-->
+<!--      <h2>Voyelles</h2>-->
+<!--      <hr>-->
+<!--      <p>모음</p>-->
+<!--      <div class="group-table">-->
+<!--        <div class="vowels-table">-->
+<!--          <table>-->
+<!--            <tr>-->
+<!--              <td>-->
+<!--                <p>ㅏ</p>-->
+<!--                <p>아</p>-->
+<!--                <p>a</p>-->
+<!--              </td>-->
+<!--              <td>-->
+<!--                <p>ㅐ</p>-->
+<!--                <p>애</p>-->
+<!--                <p>ae</p>-->
+<!--              </td>-->
+<!--              <td>-->
+<!--                <p>ㅑ</p>-->
+<!--                <p>야</p>-->
+<!--                <p>ya</p>-->
+<!--              </td>-->
+<!--              <td>-->
+<!--                <p>ㅒ</p>-->
+<!--                <p>얘</p>-->
+<!--                <p>yae</p>-->
+<!--              </td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--              <td>-->
+<!--                <p>ㅓ</p>-->
+<!--                <p>어</p>-->
+<!--                <p>eo</p>-->
+<!--              </td>-->
+<!--              <td>-->
+<!--                <p>ㅔ</p>-->
+<!--                <p>에</p>-->
+<!--                <p>e</p>-->
+<!--              </td>-->
+<!--              <td>-->
+<!--                <p>ㅕ</p>-->
+<!--                <p>여</p>-->
+<!--                <p>yeo</p>-->
+<!--              </td>-->
+<!--              <td>-->
+<!--                <p>ㅖ</p>-->
+<!--                <p>예</p>-->
+<!--                <p>ye</p>-->
+<!--              </td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--              <td>-->
+<!--                <p>ㅡ</p>-->
+<!--                <p>으</p>-->
+<!--                <p>eu</p>-->
+<!--              </td>-->
+<!--              <td>-->
+<!--                <p>ㅣ</p>-->
+<!--                <p>이</p>-->
+<!--                <p>i</p>-->
+<!--              </td>-->
+<!--              <td>-->
+<!--                <p>ㅢ</p>-->
+<!--                <p>의</p>-->
+<!--                <p>ui</p>-->
+<!--              </td>-->
+<!--            </tr>-->
+<!--          </table>-->
+<!--        </div>-->
+<!--        <div class="vowels-table">-->
+<!--          <table>-->
+<!--            <tr>-->
+<!--              <td>-->
+<!--                <p>ㅗ</p>-->
+<!--                <p>오</p>-->
+<!--                <p>o</p>-->
+<!--              </td>-->
+<!--              <td>-->
+<!--                <p>ㅛ</p>-->
+<!--                <p>요</p>-->
+<!--                <p>yo</p>-->
+<!--              </td>-->
+<!--              <td>-->
+<!--                <p>ㅘ</p>-->
+<!--                <p>와</p>-->
+<!--                <p>wa</p>-->
+<!--              </td>-->
+<!--              <td>-->
+<!--                <p>ㅙ</p>-->
+<!--                <p>왜</p>-->
+<!--                <p>wae</p>-->
+<!--              </td>-->
+<!--              <td>-->
+<!--                <p>ㅚ</p>-->
+<!--                <p>외</p>-->
+<!--                <p>woe</p>-->
+<!--              </td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--              <td>-->
+<!--                <p>ㅜ</p>-->
+<!--                <p>우</p>-->
+<!--                <p>u</p>-->
+<!--              </td>-->
+<!--              <td>-->
+<!--                <p>ㅠ</p>-->
+<!--                <p>유</p>-->
+<!--                <p>yu</p>-->
+<!--              </td>-->
+<!--              <td>-->
+<!--                <p>ㅝ</p>-->
+<!--                <p>워</p>-->
+<!--                <p>wo</p>-->
+<!--              </td>-->
+<!--              <td>-->
+<!--                <p>ㅞ</p>-->
+<!--                <p>웨</p>-->
+<!--                <p>we</p>-->
+<!--              </td>-->
+<!--              <td>-->
+<!--                <p>ㅟ</p>-->
+<!--                <p>위</p>-->
+<!--                <p>wi</p>-->
+<!--              </td>-->
+<!--            </tr>-->
+<!--          </table>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="lesson">-->
+<!--    <h2>Prononciation</h2>-->
+<!--    <hr>-->
+<!--    <p>début de syllabe - 초성 / milieu de syllabe - 충성 <br> fin de syllabe - 총성</p>-->
+<!--    <div class="group-table">-->
+<!--      <div class="vowels-table-pron">-->
+<!--        <table>-->
+<!--          <thead>-->
+<!--          <th>lettre</th>-->
+<!--          <th>prononciation</th>-->
+<!--          </thead>-->
+<!--          <tr>-->
+<!--            <td>ㅏ</td>-->
+<!--            <td>a comme dans 'chat'</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅐ</td>-->
+<!--            <td>è comme dans 'mais' ou 'appel'</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅑ</td>-->
+<!--            <td>ya comme dans 'yack'</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅒ</td>-->
+<!--            <td>yè comme dans 'Bouyei'</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅓ</td>-->
+<!--            <td>eo comme dans 'botte'</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅔ</td>-->
+<!--            <td>é comme dans 'blé'</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅕ</td>-->
+<!--            <td>yeo comme dans 'yole'</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅖ</td>-->
+<!--            <td>yé comme dans 'yéyé'</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅡ</td>-->
+<!--            <td>e comme dans 'cheval'</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅣ</td>-->
+<!--            <td>i comme dans 'riz'</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅗ</td>-->
+<!--            <td>o comme dans 'mot'</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅛ</td>-->
+<!--            <td>yo comme dans 'yoyo'</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅜ</td>-->
+<!--            <td>ou comme dans 'hiboux'</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅠ</td>-->
+<!--            <td>you comme dans 'youpi'</td>-->
+<!--          </tr>-->
+<!--        </table>-->
+<!--      </div>-->
+<!--      <div class="vowels-table-pron">-->
+<!--        <table>-->
+<!--          <thead>-->
+<!--          <th>lettre</th>-->
+<!--          <th>prononciation</th>-->
+<!--          </thead>-->
+<!--          <tr>-->
+<!--            <td>ㅢ</td>-->
+<!--            <td>ui comme dans 'huile' ou 'huître'</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅘ</td>-->
+<!--            <td>wa comme dans 'wasabi'</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅙ</td>-->
+<!--            <td>wae comme dans 'ouai'</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅚ</td>-->
+<!--            <td>woe comme dans 'fl<b>ue</b>t' ou 'm<b>ue</b>t'</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅝ</td>-->
+<!--            <td>wo comme dans 'wockisme'</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅞ</td>-->
+<!--            <td>we comme dans 'louer'</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅟ</td>-->
+<!--            <td>wi comme dans 'oui'</td>-->
+<!--          </tr>-->
+<!--        </table>-->
+<!--      </div>-->
+<!--      <div class="vowels-table-pron">-->
+<!--        <table>-->
+<!--          <thead>-->
+<!--          <tr>-->
+<!--            <th>lettre</th>-->
+<!--            <th colspan="2">prononciation</th>-->
+<!--          </tr>-->
+<!--          </thead>-->
+<!--          <thead>-->
+<!--          <th></th>-->
+<!--          <th>début de syllabe</th>-->
+<!--          <th>fin de syllabe <br>+ début de mot</th>-->
+<!--          </thead>-->
+<!--          <tr>-->
+<!--            <td>ㄱ</td>-->
+<!--            <td>entre k et gu</td>-->
+<!--            <td>k</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㄷ</td>-->
+<!--            <td>entre d et t</td>-->
+<!--            <td>t</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅂ</td>-->
+<!--            <td>entre le b et p</td>-->
+<!--            <td>p</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅈ</td>-->
+<!--            <td>entre le dj et tch</td>-->
+<!--            <td>t</td>-->
+<!--          </tr>-->
+<!--        </table>-->
+<!--      </div>-->
+<!--      <div class="vowels-table-pron">-->
+<!--        <table>-->
+<!--          <thead>-->
+<!--          <tr>-->
+<!--            <th>lettre</th>-->
+<!--            <th colspan="2">prononciation</th>-->
+<!--          </tr>-->
+<!--          </thead>-->
+<!--          <thead>-->
+<!--          <th></th>-->
+<!--          <th>début de syllabe</th>-->
+<!--          <th>fin de syllabe</th>-->
+<!--          </thead>-->
+<!--          <tr>-->
+<!--            <td>ㄱ</td>-->
+<!--            <td>entre k et gu</td>-->
+<!--            <td>k</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㄴ</td>-->
+<!--            <td>n</td>-->
+<!--            <td>n</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㄷ</td>-->
+<!--            <td>entre d et t</td>-->
+<!--            <td>t</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㄹ</td>-->
+<!--            <td>entre le r et le l</td>-->
+<!--            <td>l</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅁ</td>-->
+<!--            <td>m</td>-->
+<!--            <td>m</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅂ</td>-->
+<!--            <td>entre le b et p</td>-->
+<!--            <td>p</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅅ</td>-->
+<!--            <td>s / sh devantㅣㅑㅒㅕㅖㅛㅠ</td>-->
+<!--            <td>t</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅇ</td>-->
+<!--            <td>∅</td>-->
+<!--            <td>ng comme dans 'parki<b>ng</b>'</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅈ</td>-->
+<!--            <td>entre le dj et tch</td>-->
+<!--            <td>t</td>-->
+<!--          </tr>-->
+<!--        </table>-->
+<!--      </div>-->
+<!--      <div class="vowels-table-pron">-->
+<!--        <table>-->
+<!--          <thead>-->
+<!--          <th>lettre</th>-->
+<!--          <th colspan="2">prononciation</th>-->
+<!--          </thead>-->
+<!--          <thead>-->
+<!--          <th></th>-->
+<!--          <th>début de syllabe</th>-->
+<!--          <th>fin de syllabe</th>-->
+<!--          </thead>-->
+<!--          <tr>-->
+<!--            <td>ㅊ</td>-->
+<!--            <td>tch expiré</td>-->
+<!--            <td>t</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅋ</td>-->
+<!--            <td>k expiré</td>-->
+<!--            <td>k</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅌ</td>-->
+<!--            <td>t expiré</td>-->
+<!--            <td>t</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅍ</td>-->
+<!--            <td>p expiré</td>-->
+<!--            <td>p</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅎ</td>-->
+<!--            <td>h expiré</td>-->
+<!--            <td>t</td>-->
+<!--          </tr>-->
+<!--        </table>-->
+<!--      </div>-->
+<!--      <div class="vowels-table-pron">-->
+<!--        <table>-->
+<!--          <thead>-->
+<!--          <th>lettre</th>-->
+<!--          <th colspan="2">prononciation</th>-->
+<!--          </thead>-->
+<!--          <thead>-->
+<!--          <th></th>-->
+<!--          <th>début de syllabe</th>-->
+<!--          <th>fin de syllabe</th>-->
+<!--          </thead>-->
+<!--          <tr>-->
+<!--            <td>ㄲ</td>-->
+<!--            <td>k appuyé</td>-->
+<!--            <td>k</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㄸ</td>-->
+<!--            <td>t appuyé</td>-->
+<!--            <td>/</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅃ</td>-->
+<!--            <td>p appuyé</td>-->
+<!--            <td>/</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅆ</td>-->
+<!--            <td>s appuyé <br> sh appuyé devantㅣㅑㅒㅕㅖㅛㅠ</td>-->
+<!--            <td>t</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>ㅉ</td>-->
+<!--            <td>dj appuyé</td>-->
+<!--            <td>/</td>-->
+<!--          </tr>-->
+<!--        </table>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="footer">-->
+<!--    <hr>-->
+<!--    <h2>Sources :</h2>-->
+<!--    <ul>-->
+<!--      <li><a href="http://bruce-the-korean.blogspot.com/2015/01/basic-consonant-letters.html" target="_blank">Consonnes</a></li>-->
+<!--      <li><a href="http://bruce-the-korean.blogspot.com/2015/01/double-consonant-letters.html" target="_blank">Consonnes doubles</a></li>-->
+<!--      <li><a href="http://bruce-the-korean.blogspot.com/2015/01/vowel-letters.html" target="_blank">Voyelles</a></li>-->
+<!--      <li>Prononciation :-->
+<!--        <ul>-->
+<!--          <li><a href="https://www.kajacoree.com/cours-de-coreen/alphabet-coreen-hangeul-prononciation-consonnes-simples" target="_blank">Consonnes</a></li>-->
+<!--          <li><a href="https://www.kajacoree.com/cours-de-coreen/alphabet-coreen-hangeul-prononciation-consonnes-doubles" target="_blank">Consonnes doubles</a></li>-->
+<!--          <li><a href="https://www.kajacoree.com/cours-de-coreen/alphabet-coreen-hangeul-prononciation-consonnes-finales-composees" target="_blank">Consonnes composées</a></li>-->
+<!--          <li><a href="https://www.kajacoree.com/cours-de-coreen/regles-exceptions-prononciation-coreen" target="_blank">Exceptions</a></li>-->
+<!--        </ul>-->
+<!--      </li>-->
+<!--    </ul>-->
+  </div>
+  <div class="letter-block">
+    <h2>Prononciation</h2>
+    <hr>
+    <p>début de syllabe - 초성 / milieu de syllabe - 충성</p>
+    <p>fin de syllabe - 총성</p>
+    <br>
+    <div class="pronunciation-block">
+      <app-pronunciation-block
+        [content]="[basic_vowels_pronunciation, diphthongs_vowels_pronunciation]"
+      ></app-pronunciation-block>
+      <app-pronunciation-block
+        [content]="[special_consonants_pronunciation]"
+        [is_consonant]="true"
+        [is_special_consonant]="true"
+      ></app-pronunciation-block>
+    </div>
+    <div class="pronunciation-block">
+      <app-pronunciation-block
+        [content]="[consonants_pronunciation, double_consonants_pronunciation]"
+        [is_consonant]="true"
+      ></app-pronunciation-block>
+    </div>
+  </div>
+</main>

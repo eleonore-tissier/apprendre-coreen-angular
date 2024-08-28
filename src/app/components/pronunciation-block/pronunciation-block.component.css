@@ -1,0 +1,61 @@
+.letter-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.letter-block h2,
+.lesson h2 {
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.letter-block hr {
+  width: 11rem;
+}
+
+td {
+  padding: 1rem 1rem 1rem 0rem;
+  text-align: center;
+}
+
+.group-table {
+  display: flex;
+  align-items: start;
+  /*flex-wrap: wrap;*/
+  gap: 3rem;
+}
+
+table tr td p:nth-child(1){
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+div.legend {
+  text-align: left;
+}
+
+.legend ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+tr td:nth-child(2),
+tr td:nth-child(3),
+tr th:nth-child(2){
+  text-align: left;
+  padding-left: 1rem;
+}
+
+table tr:nth-child(2){
+  vertical-align: top;
+}
+
+table tr:nth-child(1) th{
+  padding-bottom: 1rem;
+}
+
+table tr:nth-child(2) td:nth-child(2),
+table tr:nth-child(2) th:nth-child(3){
+  text-align: left;
+  padding-left: 1rem;
+}

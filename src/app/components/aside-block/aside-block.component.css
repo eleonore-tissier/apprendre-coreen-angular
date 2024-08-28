@@ -1,0 +1,28 @@
+.content {
+  display: flex;
+  gap: 5rem;
+}
+
+.aside {
+  margin-top: 2rem;
+}
+
+ul.sumary {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+button {
+  border: none;
+}
+
+.content hr.vertical-separator {
+  margin-top: 2rem;
+}

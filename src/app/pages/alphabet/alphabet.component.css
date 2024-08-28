@@ -1,0 +1,122 @@
+main {
+  margin: 8rem 2rem 2rem 6rem;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 6rem;
+  clear: both;
+  gap: 4rem;
+}
+
+div.home-link {
+  margin-bottom: 2rem;
+}
+
+div.home-link a {
+  font-size: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.letter-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.letter-block h2,
+.lesson h2 {
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.letter-block hr {
+  width: 11rem;
+}
+
+.double hr,
+.lesson hr {
+  width: 20rem;
+}
+
+hr.long {
+  width: 30rem;
+}
+
+.group-table {
+  display: flex;
+  gap: 2rem;
+}
+
+.lesson {
+  margin-top: 2rem;
+}
+
+div.lesson div.group-table {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+td {
+  padding: 1rem 1rem 1rem 0rem;
+  text-align: center;
+}
+
+table tr td p:nth-child(1) {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+/* .vowels-table-pron table {
+    border-collapse: collapse;
+} */
+
+.vowels-table-pron table tr td,
+.vowels-table-pron table thead th {
+  padding: 1rem 0rem;
+  /* border: 1px solid black; */
+}
+
+.vowels-table-pron table thead th {
+  vertical-align: top;
+}
+
+.vowels-table-pron table tr td:nth-child(2),
+.vowels-table-pron table tr td:nth-child(3),
+.vowels-table-pron table thead th:nth-child(2),
+.vowels-table-pron table thead th:nth-child(3) {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+div.legend {
+  text-align: left;
+}
+
+.legend ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.letter-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.letter-block h2,
+.lesson h2 {
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.letter-block hr {
+  width: 11rem;
+}
+
+.pronunciation-block {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}

@@ -1,0 +1,33 @@
+<main>
+  <div class="home-link">
+    <a routerLink="/home" routerLinkActive="active">< Retour</a>
+  </div>
+  <app-title></app-title>
+  <div class="menu">
+    <app-card
+      [title]="'Alphabet'"
+      [logo]="'/img/alphabet.png'"
+      [url]="'/alphabet'"
+    ></app-card>
+    <app-card
+      [title]="'Grammaire'"
+      [logo]="'/img/grammar.png'"
+      [url]="'/grammar'"
+    ></app-card>
+    <app-card
+      [title]="'Conjugaison'"
+      [logo]="'/img/conjugation.png'"
+      [url]="'/conjugation'"
+    ></app-card>
+    <app-card
+      [title]="'Vocabulary'"
+      [logo]="'/img/vocabulary.png'"
+      [url]="'/vocabulary'"
+    ></app-card>
+    <app-card
+      [title]="'Clavier'"
+      [logo]="'/img/keyboard.png'"
+      [url]="'/keyboard'"
+    ></app-card>
+  </div>
+</main>

@@ -1,0 +1,19 @@
+ul.voc {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+ul.voc li {
+  list-style-type: none;
+}
+
+.translations {
+  margin-top: 2rem;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 2rem;
+}

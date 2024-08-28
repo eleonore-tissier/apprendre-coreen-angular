@@ -1,0 +1,21 @@
+<main>
+  <div class="home-link">
+    <a routerLink="/home" routerLinkActive="active">< Retour</a>
+  </div>
+  <app-title></app-title>
+  <div class="vocabulary">
+    <app-aside-block></app-aside-block>
+    <div class="content-block">
+      <app-voc-block
+        id="human_beings"
+        [title]="'Etre humain'"
+        [content]="human_beings"
+      ></app-voc-block>
+      <app-voc-block
+        id="school"
+        [title]="'Ecole'"
+        [content]="school"
+      ></app-voc-block>
+    </div>
+  </div>
+</main>

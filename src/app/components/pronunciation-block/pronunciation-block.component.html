@@ -1,0 +1,59 @@
+  <div class="group-table">
+    <ng-container *ngIf="is_consonant == false; else consonant_table">
+      <table *ngFor="let table of content">
+        <tr>
+          <th>lettre</th>
+          <th>prononciation</th>
+        </tr>
+        <tr *ngFor="let letter of table">
+          <td>{{letter.symbol}}</td>
+          <td>{{letter.pronunciation}}</td>
+        </tr>
+      </table>
+    </ng-container>
+    <ng-template #consonant_table>
+      <table *ngFor="let table of content">
+        <tr>
+          <th>lettre</th>
+          <th colspan="2">prononciation</th>
+        </tr>
+        <tr>
+          <th></th>
+          <th>début de syllabe</th>
+          <th>
+            fin de syllabe
+            <ng-container *ngIf="is_special_consonant">
+              <br>
+               + début de mot
+            </ng-container>
+          </th>
+        </tr>
+        <tr *ngFor="let letter of table">
+          <td>{{letter.symbol}}</td>
+          <td>{{letter.pronunciation.split(',')[0]}}</td>
+          <td>{{letter.pronunciation.split(',')[1]}}</td>
+        </tr>
+      </table>
+    </ng-template>
+  </div>
+
+<!--    <table *ngFor="let table of content" class="wrapper">-->
+<!--      <tr *ngFor="let letter of table; let i = index">-->
+<!--        <ng-container *ngIf="i % itemsPerPage == 0">-->
+<!--          <td>-->
+<!--            <app-letter-->
+<!--              class="letter"-->
+<!--              [letter]="letter"-->
+<!--            ></app-letter>-->
+<!--          </td>-->
+<!--          <td *ngFor="let item of nb_rows">-->
+<!--            <ng-container *ngIf="i + item < table.length">-->
+<!--              <app-letter-->
+<!--                class="letter"-->
+<!--                [letter]="table[i + item]"-->
+<!--              ></app-letter>-->
+<!--            </ng-container>-->
+<!--          </td>-->
+<!--        </ng-container>-->
+<!--      </tr>-->
+<!--    </table>-->

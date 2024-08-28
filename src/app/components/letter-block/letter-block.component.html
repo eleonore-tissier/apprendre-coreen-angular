@@ -1,0 +1,27 @@
+<div class="letter-block">
+  <h2>{{title}}</h2>
+  <hr>
+  <p>{{korean_title}}</p>
+  <div class="group-table">
+    <table *ngFor="let table of content" class="wrapper">
+      <tr *ngFor="let letter of table; let i = index">
+        <ng-container *ngIf="i % itemsPerPage == 0">
+          <td>
+            <app-letter
+              class="letter"
+              [letter]="letter"
+            ></app-letter>
+          </td>
+          <td *ngFor="let item of nb_rows">
+            <ng-container *ngIf="i + item < table.length">
+              <app-letter
+                class="letter"
+                [letter]="table[i + item]"
+              ></app-letter>
+            </ng-container>
+          </td>
+        </ng-container>
+      </tr>
+    </table>
+  </div>
+</div>
