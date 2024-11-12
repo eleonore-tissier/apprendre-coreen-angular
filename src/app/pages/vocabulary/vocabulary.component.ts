@@ -41,6 +41,10 @@ export class VocabularyComponent {
       word: '여자아이',
       translation: 'garçon',
     },
+    {
+      word: '사람',
+      translation: 'personne',
+    }
   ];
 
   school: WordModel[] = [

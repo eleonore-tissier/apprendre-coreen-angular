@@ -11,3 +11,11 @@ div.home-link a {
   font-size: 1.5rem;
   margin-bottom: 5rem;
 }
+
+div.content {
+  clear: both;
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}

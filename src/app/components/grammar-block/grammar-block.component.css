@@ -1,0 +1,28 @@
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 14rem;
+  min-height: 15rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: solid 0.5px rgba(0, 0, 0, 0.1);
+  align-content: center;
+}
+
+.block {
+  background-color: #FFFFFF;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+
+.block:hover {
+  background: linear-gradient(135deg, rgba(255,255,255,1) 60%, rgba(0,0,0,0.05) 100%);
+  transform: scale(1.05);
+  transition: 0.4s;
+}
