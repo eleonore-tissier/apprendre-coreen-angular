@@ -10,12 +10,3 @@ main {
   clear: both;
   gap: 4rem;
 }
-
-div.home-link {
-  margin-bottom: 2rem;
-}
-
-div.home-link a {
-  font-size: 1.5rem;
-  margin-bottom: 5rem;
-}

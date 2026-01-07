@@ -5,9 +5,12 @@
   font-size: 16px;
   font-family: 'Quicksand';
   margin: 0;
-  background-color: #f5f5f5;
   color: #333;
   text-decoration: none;
+}
+
+body {
+  background-color: #f5f5f5;
 }
 
 /* Liens */
