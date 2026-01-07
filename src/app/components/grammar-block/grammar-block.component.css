@@ -4,14 +4,10 @@
   flex-direction: column;
   gap: 2rem;
   width: 14rem;
-  min-height: 15rem;
+  height: 22rem;
   padding: 2rem;
   border-radius: 0.5rem;
   border: solid 0.5px rgba(0, 0, 0, 0.1);
-  align-content: center;
-}
-
-.block {
   background-color: #FFFFFF;
 }
 
