@@ -1,7 +1,7 @@
-import {Component, Input, NgModule} from '@angular/core';
+import {Component, Input, NgModule, OnInit} from '@angular/core';
 import {TitleComponent} from "../../components/title/title.component";
 import {Title} from "@angular/platform-browser";
-import {RouterLink, RouterLinkActive} from "@angular/router";
+import {Route, Router, RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
 import {GrammarBlockComponent} from "../../components/grammar-block/grammar-block.component";
 import {NgForOf} from "@angular/common";
 import {LetterModel} from "../../models/letter.model";
@@ -11,22 +11,19 @@ import {LetterModel} from "../../models/letter.model";
   standalone: true,
   imports: [
     TitleComponent,
-    RouterLink,
-    RouterLinkActive,
     GrammarBlockComponent,
-    NgForOf
+    RouterOutlet,
   ],
   templateUrl: './grammar.component.html',
   styleUrl: './grammar.component.css'
 })
-export class GrammarComponent {
+export class GrammarComponent implements OnInit {
 
-  grammar_boxes = [
-    "Les particules",
-    "La construction de phrases",
-    "Les pronoms démonstratifs",
-    "Les pronoms possessifs",
-    "Les nombres",
-    "Les honorifiques",
-  ]
+  constructor(
+    private router: Router
+  ) {}
+
+  ngOnInit() {
+    this.router.events.subscribe();
+  }
 }

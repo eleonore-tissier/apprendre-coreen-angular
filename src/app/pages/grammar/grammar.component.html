@@ -1,28 +1,27 @@
 <main>
-  <div class="home-link">
-    <a routerLink="/home" routerLinkActive="active">< Retour</a>
-  </div>
   <app-title></app-title>
   <div class="content">
     <app-grammar-block
       [title]="'La construction de phrases'"
-      [logo]="'/img/construction.jpg'"
+      [url]="'/grammar/sentences'"
     ></app-grammar-block>
     <app-grammar-block
       [title]="'Les particules'"
-      [logo]="'/img/construction.jpg'"
+      [url]="'/grammar/particles'"
     ></app-grammar-block>
     <app-grammar-block
       [title]="'Les pronoms démonstratifs'"
-      [logo]="'/img/construction.jpg'"
+      [url]="'/grammar/pronouns'"
     ></app-grammar-block>
     <app-grammar-block
       [title]="'Les nombres'"
       [logo]="'/img/numbers.jpg'"
+      [url]="'/grammar/numbers'"
     ></app-grammar-block>
     <app-grammar-block
       [title]="'Les honorifiques'"
       [logo]="'/img/honorific.png'"
+      [url]="'/grammar/honorifics'"
     ></app-grammar-block>
   </div>
 </main>
