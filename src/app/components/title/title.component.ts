@@ -19,8 +19,10 @@ export class TitleComponent implements OnInit {
   current_title: string = "Coréen";
   korean_current_title: string = "한국어";
 
+  displayReturn = false;
+
   titles: { [key: string] : string; } = {
-    "/home": "Coréen,한구어",
+    "/": "Coréen,한구어",
     "/alphabet": "Alphabet,한글",
     "/grammar": "Grammaire,문법",
     "/vocabulary": "Vocabulaire,단어집",
@@ -29,8 +31,12 @@ export class TitleComponent implements OnInit {
   }
 
   ngOnInit() {
-    let titles: string[] = this.titles[this.router.url].split(',', 2);
+    let pageUrl = this.router.url.split('/',2);
+    let titles: string[] = this.titles["/" + pageUrl[1]].split(',', 2);
     this.current_title = titles[0];
     this.korean_current_title = titles[1];
+    if (this.router.url !== "/") {
+      this.displayReturn = true;
+    }
   }
 }
