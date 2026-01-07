@@ -5,12 +5,39 @@ import {AlphabetComponent} from "./pages/alphabet/alphabet.component";
 import {KeyboardComponent} from "./pages/keyboard/keyboard.component";
 import {VocabularyComponent} from "./pages/vocabulary/vocabulary.component";
 import {ConjugationComponent} from "./pages/conjugation/conjugation.component";
+import {GrammarContentComponent} from "./pages/grammar-content/grammar-content.component";
 
 export const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'grammar', component: GrammarComponent },
+  { path: '', component: HomeComponent },
+  {
+    path: 'grammar',
+    component: GrammarComponent,
+  },
+  {
+    path: 'grammar/sentences',
+    component: GrammarContentComponent,
+  },
+  {
+    path: 'grammar/particles',
+    component: GrammarContentComponent,
+  },
+  {
+    path: 'grammar/pronouns',
+    component: GrammarContentComponent,
+  },
+  {
+    path: 'grammar/numbers',
+    component: GrammarContentComponent,
+  },
+  {
+    path: 'grammar/honorifics',
+    component: GrammarContentComponent,
+  },
   { path: 'conjugation', component: ConjugationComponent },
-  { path: 'vocabulary', component: VocabularyComponent },
+  {
+    path: 'vocabulary',
+    loadChildren: () => import('./pages/vocabulary/vocabulary.routes').then(m => m.routes)
+  },
   { path: 'keyboard', component: KeyboardComponent },
   { path: 'alphabet', component: AlphabetComponent },
 ];

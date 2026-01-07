@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {TitleComponent} from "../../components/title/title.component";
 import {AsideBlockComponent} from "../../components/aside-block/aside-block.component";
 import {VocBlockComponent} from "../../components/voc-block/voc-block.component";
 import {WordModel} from "../../models/word.model";
-import {RouterLink, RouterLinkActive} from "@angular/router";
+import {Router, RouterLink, RouterLinkActive} from "@angular/router";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-vocabulary',
@@ -13,12 +14,20 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
     AsideBlockComponent,
     VocBlockComponent,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    NgIf
   ],
   templateUrl: './vocabulary.component.html',
   styleUrl: './vocabulary.component.css'
 })
-export class VocabularyComponent {
+export class VocabularyComponent implements OnInit {
+
+  constructor(
+    private router: Router
+  ) {}
+
+  word_list_title = '';
+  word_list: WordModel[] = [];
 
   human_beings: WordModel[] = [
     {
@@ -69,4 +78,21 @@ export class VocabularyComponent {
       translation: 'professeur',
     },
   ];
+
+  ngOnInit() {
+    this.router.events.subscribe((event) => {
+      if (event) {
+        switch (this.router.url) {
+          case '/vocabulary/human_beings':
+            this.word_list = this.human_beings;
+            this.word_list_title = 'Être humain';
+            break;
+          case '/vocabulary/school':
+            this.word_list = this.school;
+            this.word_list_title = 'École';
+            break;
+        }
+      }
+    });
+  }
 }
